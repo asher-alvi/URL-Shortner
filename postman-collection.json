@@ -1,7 +1,6 @@
 {
   "info": {
-    "_postman_id": "f89d59cc-3380-4df6-8652-abc12345def0",
-    "name": "URL Shortener API",
+    "name": "URL Shortener",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -10,44 +9,10 @@
       "request": {
         "method": "POST",
         "header": [{ "key": "Content-Type", "value": "application/json" }],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"longUrl\": \"https://www.google.com\"\n}"
-        },
-        "url": {
-          "raw": "http://localhost:5000/shorten",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "5000",
-          "path": ["shorten"]
-        }
-      }
-    },
-    {
-      "name": "Redirect (Visit Short URL)",
-      "request": {
-        "method": "GET",
-        "url": {
-          "raw": "http://localhost:5000/abc123",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "5000",
-          "path": ["abc123"]
-        }
-      }
-    },
-    {
-      "name": "Get Stats",
-      "request": {
-        "method": "GET",
-        "url": {
-          "raw": "http://localhost:5000/stats/abc123",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "5000",
-          "path": ["stats", "abc123"]
-        }
-      }
+        "body": { "mode": "raw", "raw": "{ \"url\": \"https://example.com/long/path\" }" },
+        "url": { "raw": "http://localhost:8080/shorten", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["shorten"] }
+      },
+      "response": []
     }
   ]
 }
