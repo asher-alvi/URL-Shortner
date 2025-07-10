@@ -27,7 +27,7 @@ mongod
 npm start
 ```
 
-4. Testing the API using Postman:
+3. Test the API using Postman:
 Import the postman-collection.json and run:
 
 POST http://localhost:8080/shorten
